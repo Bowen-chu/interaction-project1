@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borges Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="page-1" class="page active" onclick="transitionToPage2()">
+        <h1 class="main-title">Jorges Luis Borges</h1>
+    </section>
+
+    <section id="page-2" class="page">
+        <div class="content-container">
+            <p class="story-text">
+                In a <a href="dream.html" class="blue-link">dream</a> as quiet as velvet, I find myself reading a leather-bound <a href="book.html" class="blue-link">book</a>. The protagonist of the <a href="book.html" class="blue-link">book</a> is also dreaming. In his <a href="dream.html" class="blue-link">dream</a>, he is trapped inside a <a href="labyrinth.html" class="blue-link">labyrinth</a>. No matter which path he takes, every turn leads him back to the beginning. The repetition persists, and his anxiety steadily grows. When panic reaches its peak, he chooses a form of escape that seems almost contradictory: he stops moving. He remains where he is, allows himself to relax, and wakes up from the reality of the <a href="book.html" class="blue-link">book</a>. At the same moment, I wake up in my own room. After waking, I open the <a href="book.html" class="blue-link">book</a> beside me and read its final paragraph. The character lifts his head from the desk and realizes—as I do—that he has finally escaped the <a href="labyrinth.html" class="blue-link">labyrinth</a>.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function transitionToPage2() {
+            const p1 = document.getElementById('page-1');
+            const p2 = document.getElementById('page-2');
+            p1.classList.add('exit-animation');
+            setTimeout(() => {
+                p1.classList.remove('active');
+                p2.classList.add('active');
+            }, 600); 
+        }
+    </script>
+</body>
+</html>
